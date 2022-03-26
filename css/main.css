@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  background: #1b1b20;
+  font-family: 'Poppins';
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+.card {
+  background: white;
+  margin-bottom: 2em;
+  padding: 4em;
+}
+
+a {
+  color: #0063e4;
+  font-size: 1.3em;
+  text-decoration: none;
+  margin-top: 1em;
+  display: inline-block;
+  font-weight: bold;
+  padding: .5em;
+  margin-left: -.5em;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+a:before, a:after {
+  position: absolute;
+  content: '';
+  border-radius: 1em;
+  bottom: .3em;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:before {
+  border-bottom: 3px solid #0063e4;
+  width: 1em;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+a:after {
+  border-bottom: 3px solid #35dda5;
+  width: 82%;
+  left: 1em;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+a:hover:before {
+  -webkit-transform: scaleX(0.3);
+          transform: scaleX(0.3);
+}
+
+a:hover:after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+/*# sourceMappingURL=main.css.map */
